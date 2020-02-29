@@ -3,10 +3,16 @@ node_js:
   - 9
 os:
   - linux
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: 8676121626c805efaf4552c20c09c8611fa9c6ac  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
-  on:
-    branch: master
+dist: trusty
+sudo: required
+
+before_script:
+  - npm install -g @angular/cli
+
+branches:
+  only:
+  - master
+  
+script:
+- ng lint
+- ng build --prod --base-href https://tester1313.github.io/teste-deploy/
