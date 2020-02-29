@@ -20,6 +20,6 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: dist/travis-demo
+  local_dir: dist/teste-deploy
   on:
     branch: master
