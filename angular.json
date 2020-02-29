@@ -22,7 +22,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "../app1/node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
              
             ],
             "scripts": []
