@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - 9
+os:
+  - linux
+dist: trusty
+sudo: required
+
+before_script:
+  - npm install -g @angular/cli
+
+branches:
+  only:
+  - master
+  
+script:
+- ng lint
+- ng build --prod --base-href https://tester1313.github.io/teste-deploy/
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/teste-deploy
+  on:
+    branch: master
