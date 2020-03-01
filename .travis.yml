@@ -21,5 +21,6 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/teste-deploy
+  force: true
   on:
     branch: master
