@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - 9
+os:
+  - linux
 dist: trusty
 sudo: required
 
@@ -10,12 +12,12 @@ branches:
 
 before_script:
   - npm install -g @angular/cli
-
+  
 script:
-  - ng lint
-  - ng build --prod --base-href https://tester1313.github.io/teste-deploy/
+- npm run test-headless
+- ng build --prod --base-href https://tester1313.github.io/teste-deploy/
 
- deploy:
+deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
