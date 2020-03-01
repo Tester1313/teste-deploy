@@ -20,7 +20,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist/teste-deploy
+  local_dir: dist
   force: true
   on:
     branch: master
